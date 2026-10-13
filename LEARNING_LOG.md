@@ -5,6 +5,8 @@
   - What is Data Engineering
   - The Data Engineering Ecosystem
   - Data Engineering Lifecycle
+  - Querying & Data Wrangling with SQL, Performance Tuning & Monitoring, Data Governance & Compliance, DataOps
 - Wrote notes for Stage 0 → [00-overview](00-overview/)
 - Set up the learning roadmap and this repo
+- **To review:** the 3 phases of DataOps; masking vs anonymization vs pseudonymization
 - **Next:** Stage 1 — Foundations (SQL first)
