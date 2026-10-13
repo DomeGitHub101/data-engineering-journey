@@ -37,6 +37,12 @@ Generation → Ingestion → Storage → Transformation → Serving
 4. **Enriching:** เพิ่มข้อมูลจากแหล่งอื่นให้มีบริบทมากขึ้น
 5. **Validating:** ตรวจว่าผลลัพธ์ถูกต้องตามกฎ
 
+## เจาะลึกแต่ละเรื่อง
+- [Querying & Data Wrangling with SQL](04-querying-and-data-wrangling-with-sql.md)
+- [Performance Tuning & Monitoring](05-performance-tuning-and-monitoring.md)
+- [Data Governance & Compliance](06-data-governance-and-compliance.md)
+- [DataOps](07-dataops.md)
+
 ## 🧠 Self-check
 <details>
 <summary><b>1. เรียงขั้นของ lifecycle และอธิบายสั้น ๆ แต่ละขั้น</b></summary>
