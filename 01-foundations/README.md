@@ -7,4 +7,4 @@
 - [ ] SQL
 
 ## Exercises & Notes
-_Coming soon._
+- [Python](python/) — Python Basics
