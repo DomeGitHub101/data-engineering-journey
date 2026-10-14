@@ -7,7 +7,7 @@ My journey to becoming a Data Engineer — notes, exercises, and portfolio proje
 | Stage | Topic | Status |
 |---|---|---|
 | 0 | [Overview](00-overview/) | ✅ Done |
-| 1 | [Foundations](01-foundations/) — Linux, Git, Python, SQL | ⏳ Next |
+| 1 | [Foundations](01-foundations/) — Linux, Git, Python, SQL | ⏳ In progress |
 | 2 | [Databases & Data Modeling](02-databases-modeling/) | ⬜ |
 | 3 | [Data Warehouse & Lakehouse](03-warehouse-lakehouse/) | ⬜ |
 | 4 | [ETL / ELT & Transformation](04-etl-elt/) — dbt | ⬜ |
@@ -21,6 +21,7 @@ My journey to becoming a Data Engineer — notes, exercises, and portfolio proje
 ## Courses
 
 - [x] Introduction to Data Engineering (Coursera) — Modules 1–3
+- [ ] Python for Data Science, AI & Development (Coursera) — in progress
 
 ## Learning Log
 

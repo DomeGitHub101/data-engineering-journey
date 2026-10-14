@@ -1,5 +1,9 @@
 # Learning Log
 
+## 2026-10-14
+- Started **Python for Data Science, AI & Development** (Coursera) — Module 1: Python Basics
+- Notes: [01-foundations/python](01-foundations/python/)
+
 ## 2026-10-13
 - Finished **Introduction to Data Engineering** (Coursera) Modules 1–3
   - What is Data Engineering
