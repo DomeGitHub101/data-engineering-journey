@@ -1,7 +1,13 @@
 # Learning Log
 
+## 2026-10-15
+- Completed Module 2: Python Data Structures (tuples, lists, dictionaries, sets)
+- Notes: [02-python-data-structures.md](01-foundations/python/02-python-data-structures.md)
+- Planned the full IBM Data Engineering course path → [COURSES.md](COURSES.md)
+
 ## 2026-10-14
-- Started **Python for Data Science, AI & Development** (Coursera) — Module 1: Python Basics
+- Started **Python for Data Science, AI & Development** (Coursera)
+- Completed Module 1: Python Basics
 - Notes: [01-foundations/python](01-foundations/python/)
 
 ## 2026-10-13
