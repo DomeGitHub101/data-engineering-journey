@@ -1,5 +1,26 @@
 # Python Basics
 
+> [!NOTE]
+> **สรุป Module 1 (จากหน้าสรุปของคอร์ส)**
+> **Data Types**
+> - Python แยกชนิดข้อมูลได้: `int`, `float`, `str`, `bool`
+> - `int` = จำนวนเต็ม บวกหรือลบก็ได้ / `float` = ตัวเลขที่มีจุดทศนิยม แทนได้ทั้งค่าเต็มและเศษส่วน (เช่น `5.0`, `0.25`)
+> - Typecasting: แปลง `int` ↔ `float` ได้, แปลงตัวเลขเป็น `str` ได้, แปลงตัวเลขเป็น `bool` ได้ (`0` → `False`, ค่าอื่นที่ไม่ใช่ 0 → `True`)
+>
+> **Expressions & Variables**
+> - Expression = ค่า + operator ที่คำนวณออกมาเป็นผลลัพธ์เดียว
+> - `//` = หารแบบปัดเศษทิ้ง (integer division)
+> - คำนวณตามลำดับ **BODMAS**: วงเล็บ → ยกกำลัง → คูณ/หาร → บวก/ลบ
+> - `=` คือ assignment operator; กำหนดค่าใหม่ให้ตัวแปรเดิม = เขียนทับค่าเก่า
+> - แก้ค่าตัวแปรหนึ่งจะกระทบอีกตัวแปร **เฉพาะเมื่อทั้งคู่อ้างถึง mutable object เดียวกัน** (ดูข้อ 2)
+>
+> **Strings**
+> - เขียนใน `" "` หรือ `' '` ใส่ได้ทั้งตัวอักษร ช่องว่าง ตัวเลข สัญลักษณ์ เป็น **ordered sequence** ของตัวอักษร
+> - ทำ indexing (บวก/ลบ), slicing และ stride ได้
+> - Concatenation (`+`) และ replication (`*`) ได้ string ใหม่; `len()` ได้ตัวเลข
+> - String เป็น **immutable** แก้ไขของเดิมไม่ได้ — method ทุกตัว (`upper`, `replace`, `find`, ...) คืนค่า string ใหม่
+> - Escape sequences: `\n` ขึ้นบรรทัดใหม่, `\t` tab, `\\` backslash
+
 ## 1. Data Types พื้นฐาน
 | Type | ตัวอย่าง | ใช้กับข้อมูลแบบไหน |
 |---|---|---|
@@ -37,6 +58,30 @@ power = 2 ** 10         # 1024
 - ตั้งชื่อตัวแปรแบบ `snake_case` และสื่อความหมาย เช่น `total_sales` ไม่ใช่ `x`
 - ตัวแปรเปลี่ยนค่าได้: `count = count + 1` หรือ `count += 1`
 
+### ลำดับการคำนวณ (BODMAS)
+```python
+2 + 3 * 4       # 14   ← คูณก่อน
+(2 + 3) * 4     # 20   ← วงเล็บก่อน
+2 ** 3 * 2      # 16   ← ยกกำลังก่อนคูณ
+```
+> เขียนวงเล็บให้ชัดไว้ก่อนเสมอ ทั้งอ่านง่ายและกันพลาด
+
+### ตัวแปรสองตัวอ้างถึงของชิ้นเดียวกัน (Reference)
+```python
+# immutable (int, float, str): เปลี่ยน a แล้ว b ไม่เปลี่ยน
+a = 10
+b = a
+a = 20
+print(b)        # 10
+
+# mutable (เช่น list ที่จะเรียนใน Module 2): แก้ผ่านตัวหนึ่ง อีกตัวเปลี่ยนตาม!
+x = [1, 2, 3]
+y = x           # y ชี้ไปที่ list เดียวกับ x
+x.append(4)
+print(y)        # [1, 2, 3, 4]
+y = x.copy()    # ถ้าอยากได้สำเนาแยก ต้อง copy
+```
+
 ## 3. String Operations
 ### Indexing & Slicing
 ```python
@@ -47,6 +92,13 @@ city[0:4]    # 'Bang'   ← [start:end] ไม่รวม end
 city[::2]    # 'Bnkk'   ← stride ทีละ 2
 city[::-1]   # 'kokgnaB' ← กลับด้าน
 len(city)    # 7
+```
+
+### Concatenation & Replication
+```python
+"Data" + " " + "Engineer"   # 'Data Engineer'
+"-" * 20                    # '--------------------'  ← ใช้ทำเส้นคั่นใน log
+"Rows: " + 100              # ❌ TypeError ต้องเป็น "Rows: " + str(100) หรือใช้ f-string
 ```
 
 ### Methods ที่ใช้บ่อย
@@ -66,6 +118,7 @@ s.find("Data")            # 9  (ไม่เจอ = -1)
 ```python
 print("line1\nline2")     # \n ขึ้นบรรทัดใหม่
 print("col1\tcol2")       # \t tab
+print("C:\\data\\raw")    # \\ = backslash 1 ตัว → C:\data\raw
 print(r"C:\new\data")     # r"" = raw string ไม่แปล \
 
 name, rows = "orders", 1500
@@ -127,6 +180,20 @@ _, year, month, day = filename.replace(".csv", "").split("_")
 <summary><b>4. ทำไม `s.upper()` แล้ว `print(s)` ยังเป็นตัวเล็กอยู่?</b></summary>
 
 เพราะ string เป็น immutable `upper()` คืน string ใหม่ แต่ไม่ได้แก้ `s` ต้องเขียน `s = s.upper()`
+
+</details>
+
+<details>
+<summary><b>5. `2 + 3 * 2 ** 2` ได้เท่าไหร่?</b></summary>
+
+`14` เพราะยกกำลังก่อน (`2 ** 2 = 4`) → คูณ (`3 * 4 = 12`) → บวก (`2 + 12`)
+
+</details>
+
+<details>
+<summary><b>6. `a = "hi"`, `b = a`, `a = a.upper()` แล้ว `b` เป็นอะไร?</b></summary>
+
+ยังเป็น `'hi'` เพราะ string เป็น immutable `a.upper()` สร้าง string ใหม่แล้วให้ `a` ชี้ไปที่ของใหม่ ส่วน `b` ยังชี้ของเดิม
 
 </details>
 

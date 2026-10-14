@@ -7,4 +7,4 @@
 - [ ] SQL
 
 ## Exercises & Notes
-- [Python](python/) — Python Basics
+- [Python](python/) — Python Basics, Python Data Structures
