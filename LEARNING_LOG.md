@@ -3,6 +3,8 @@
 ## 2026-10-15
 - Completed Module 2: Python Data Structures (tuples, lists, dictionaries, sets)
 - Notes: [02-python-data-structures.md](01-foundations/python/02-python-data-structures.md)
+- Completed Module 3: Python Programming Fundamentals (conditions, loops, functions, exception handling, classes)
+- Notes: [03-python-programming-fundamentals.md](01-foundations/python/03-python-programming-fundamentals.md)
 - Planned the full IBM Data Engineering course path → [COURSES.md](COURSES.md)
 
 ## 2026-10-14

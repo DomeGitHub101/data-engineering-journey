@@ -5,7 +5,7 @@
 | # | Course | Status |
 |---|---|---|
 | 1 | Introduction to Data Engineering | ✅ Done |
-| 2 | Python for Data Science, AI & Development | ⏳ In progress (Module 2/5) |
+| 2 | Python for Data Science, AI & Development | ⏳ In progress (Module 3/5) |
 | 3 | Python Project for Data Engineering | ⬜ |
 | 4 | Introduction to Relational Databases | ⬜ |
 | 5 | Databases and SQL for Data Science with Python | ⬜ |

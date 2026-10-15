@@ -23,7 +23,7 @@ My journey to becoming a Data Engineer — notes, exercises, and portfolio proje
 Following the **IBM Data Engineering Professional Certificate** (16 courses) plus self-study — see [COURSES.md](COURSES.md).
 
 - [x] Introduction to Data Engineering
-- [ ] Python for Data Science, AI & Development — in progress (Module 2/5)
+- [ ] Python for Data Science, AI & Development — in progress (Module 3/5)
 
 ## Learning Log
 
